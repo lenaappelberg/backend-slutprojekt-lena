@@ -1,4 +1,6 @@
 import express from "express";
+import router from "./router/product.router.js"; 
 const app=express();
-
-export default app;
+app.use(express.json());
+app.use('/estore/product',router)
+export default app;           
