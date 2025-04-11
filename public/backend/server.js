@@ -8,9 +8,6 @@ const __dirname=path.dirname(__filename)
 console.log(__dirname)
 const PORT=process.env.PORT ||8080
 const mongoURI=process.env.mongoURI
-/*app.get('/',(req,res)=>{
-    res.sendfile(path)
-})*/ 
 const dbconnect= async () => {
     try {
         const mongo=await mongoose.connect(mongoURI)
@@ -18,7 +15,6 @@ const dbconnect= async () => {
     } catch (error) {
         console.log(`MongoDB Connection error: ${error.message}`)
     }
-    
 }
 const startServer=async () => {
     try {
